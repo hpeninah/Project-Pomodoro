@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useInterval from "../utils/useInterval";
-import FocusDurationSelect from "./TwentyFiveMinSelect";
-import BreakDurationSelect from "./FiveMinutesSelect";
+import TwentyFiveMinSelect from "./TwentyFiveMinSelect";
+import FiveMinutesSelect from "./FiveMinutesSelect";
 import classNames from "../utils/class-names";
 import TimerDisplay from "./Timer";
 import PlayPauseStop from "./PlayPauseStop";
@@ -72,13 +72,13 @@ function Pomodoro() {
   function timeExpired(){
 
   if (focusMode){
-    new Audio(`https://bigsoundbank.com/UPLOAD/mp3/0899.mp3`).play();
+    new Audio(`https://bigsoundbank.com/UPLOAD/mp3/1482.mp3`).play();
     setMode(false);
     setTimerMinutes(breakDuration);
   }
 
   if (!focusMode){
-    new Audio(`https://bigsoundbank.com/UPLOAD/mp3/0899.mp3`).play();
+    new Audio(`https://bigsoundbank.com/UPLOAD/mp3/1482.mp3`).play();
     setMode(true);
     setTimerMinutes(focusDuration);
   }
@@ -110,8 +110,8 @@ function Pomodoro() {
   return (
   <div className="pomodoro">
     <div className="row">
-      <FocusDurationSelect focusDuration={focusDuration} decreaseFocusDuration={decreaseFocusDuration} increaseFocusDuration={increaseFocusDuration}/>
-      <BreakDurationSelect breakDuration={breakDuration} decreaseBreakDuration={decreaseBreakDuration} increaseBreakDuration={increaseBreakDuration}/>
+      <TwentyFiveMinSelect focusDuration={focusDuration} decreaseFocusDuration={decreaseFocusDuration} increaseFocusDuration={increaseFocusDuration}/>
+      <FiveMinutesSelect breakDuration={breakDuration} decreaseBreakDuration={decreaseBreakDuration} increaseBreakDuration={increaseBreakDuration}/>
     </div>
     <div className="row">
       <div className="col">

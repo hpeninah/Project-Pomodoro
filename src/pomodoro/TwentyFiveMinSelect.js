@@ -1,7 +1,7 @@
 import React from "react";
 import {minutesToDuration} from '../utils/duration';
 
-export default function FocusDurationSelect(props){
+export default function TwentyFiveMinSelect(props){
     const{ focusDuration, increaseFocusDuration, decreaseFocusDuration,} = props;
     
     return(
@@ -11,10 +11,19 @@ export default function FocusDurationSelect(props){
                 Focus Duration: {minutesToDuration(focusDuration)}
             </span>
             <div className="input-group-append">
-            <button type="button" className="btn btn-secondary" data-testid="decrease-focus" onClick={decreaseFocusDuration}>
+            <button 
+            type="button" 
+            className="btn btn-secondary" 
+            data-testid="decrease-focus" 
+            ={decreaseFocusDuration}
+            >
                 <span className="oi oi-minus" />
             </button>
-            <button type="button" className="btn btn-secondary" data-testid="increase-focus" onClick={increaseFocusDuration}>
+            <button 
+            type="button" 
+            className="btn btn-secondary" 
+            data-testid="increase-focus" 
+            onClick={increaseFocusDuration}>
                 <span className="oi oi-plus" />
             </button>
             </div>

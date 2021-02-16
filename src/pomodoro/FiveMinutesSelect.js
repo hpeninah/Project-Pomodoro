@@ -1,7 +1,7 @@
 import React from "react";
 import {minutesToDuration} from "../utils/duration";
 
-export default function BreakDurationSelect(props){
+export default function FiveMinuteSelect(props){
     const{ breakDuration, increaseBreakDuration, decreaseBreakDuration,} = props;
     
     return(
@@ -12,10 +12,20 @@ export default function BreakDurationSelect(props){
                     Break Duration: {minutesToDuration(breakDuration)}
                 </span>
                 <div className="input-group-append">
-                    <button type="button" className="btn btn-secondary" data-testid="decrease-break" onClick={decreaseBreakDuration}>
+                    <button
+                    type="button" 
+                    className="btn btn-secondary" 
+                    data-testid="decrease-break" 
+                    onClick={decreaseBreakDuration}
+                    >
                         <span className="oi oi-minus" />
                     </button>
-                    <button type="button" className="btn btn-secondary" data-testid="increase-break" onClick={increaseBreakDuration}>
+                    <button 
+                    type="button" 
+                    className="btn btn-secondary" 
+                    data-testid="increase-break" 
+                    onClick={increaseBreakDuration}
+                    >
                         <span className="oi oi-plus" />
                     </button>
                 </div>
