@@ -14,8 +14,8 @@ export default function TwentyFiveMinSelect(props){
             <button 
             type="button" 
             className="btn btn-secondary" 
-            data-testid="decrease-focus" 
-            ={decreaseFocusDuration}
+            data-testid="decrease-focus"
+            onClick= {decreaseFocusDuration}
             >
                 <span className="oi oi-minus" />
             </button>
